@@ -2,6 +2,11 @@
 
 Public classroom-review version. Canvas submission is handled by Ci.
 
+- Map: https://galaxci.com/columbia-campus-map/
+- Repository: https://github.com/Cisanotheraccount/columbia-campus-map
+
+Published on 13 November 2026. HTTPS is enforced for this project site.
+
 ## Open locally
 
 From this directory:
@@ -47,3 +52,7 @@ Code, data, and AI-assistance provenance: [CODE_SOURCES.txt](CODE_SOURCES.txt).
 ## Browser verification update
 
 Verified the final static map in a headless browser: all three campus views, building and room-number search, the shared Mudd/Engineering Terrace point, the Fayerweather 203 floor conflict, standalone/embedded Avery behavior, and 390px mobile layout. No browser errors. Evidence: qa/browser-checks.json and screenshots. These are the earlier local checks; online verification is recorded separately after publication. No Canvas submission has been made.
+
+## Online verification — 13 November 2026
+
+A fresh unauthenticated Chromium session loaded the published HTTPS map at desktop 1280×800 and mobile 390×844. All three campus views, coincident Mudd/Engineering Terrace references, room search, the preserved Fayerweather 203 floor conflict, supplemental building sources, Avery deep-link reload, and drawer/dialog controls passed. No JavaScript errors, failed HTTP responses or localhost requests were observed. These checks do not certify every external source website or all visitor devices.

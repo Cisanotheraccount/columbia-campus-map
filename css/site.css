@@ -2,3 +2,5 @@
 @media(max-width:600px){.map-tools{top:12px;padding-left:14px;gap:4px}.wordmark{font-size:18px}.map-tools select{font-size:12px;max-width:126px}.map-tools button{font-size:12px;padding:0 8px}.drawer{top:75px;right:12px;width:min(350px,calc(100% - 24px));max-height:calc(100dvh - 130px);padding:18px}dialog{max-width:calc(100% - 24px);padding:22px}.status{bottom:38px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
 .explore{display:block;background:#1d4f91;color:white;border-radius:8px;padding:9px 13px;margin:16px 0;font-size:13px}
+/* Keep map navigation beneath the open directory, including on narrow screens. */
+.drawer{z-index:3}.map-tools{z-index:4}
