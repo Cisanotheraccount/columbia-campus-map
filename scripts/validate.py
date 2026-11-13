@@ -14,6 +14,16 @@ assert len(spaces) == len({r['space_id'] for r in spaces}) == 551
 assert all(f['geometry']['type'] == 'Point' and len(f['geometry']['coordinates']) == 2 for f in buildings)
 assert sum(r['building_id'] not in ids for r in spaces) == 24
 assert all('room_coordinates' not in r for r in spaces)
+assert collections.Counter(f['properties']['entity_type'] for f in buildings) == {'building': 83, 'institution_site': 1}
+assert {f['properties']['map_panel'] for f in buildings} == {'Morningside', 'Manhattanville', 'CUIMC'}
+for f in buildings:
+    lon, lat = f['geometry']['coordinates']
+    assert -74.1 < lon < -73.8 and 40.7 < lat < 40.95, f['properties']['building_id']
+    source_url = f['properties'].get('source_url') or (f['properties'].get('source_urls') or [''])[0]
+    assert source_url.startswith(('https://', 'http://'))
+fayerweather = [r for r in spaces if 'fayerweather' in r['building_id'] and r['room_key'] == '203']
+assert len(fayerweather) == 1 and 'conflict' in fayerweather[0]['floor_status']
+assert not fayerweather[0]['accepted_floor_values']
 assert style['version'] == 8 and len(style['layers']) > 0
 for f in buildings:
     assert f['properties']['directory_count'] == sum(r['building_id'] == f['properties']['building_id'] for r in spaces)

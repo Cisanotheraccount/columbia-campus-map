@@ -56,7 +56,8 @@ function showBuilding(id, focus = true) {
   if (p.address) detail.append(node('p', p.address, 'detail-meta'));
   const list = spaces.filter(r => r.building_id === id);
   detail.append(node('p', list.length ? `${list.length} directory entries. Room positions are not mapped.` : 'No space directory linked in this index.', 'detail-meta'));
-  if (p.source_url) detail.append(sourceLink(p.source_url));
+  const buildingSource = p.source_url || p.source_urls?.[0];
+  if (buildingSource) detail.append(sourceLink(buildingSource));
   if (window.parent !== window && p.building_id === 'operations-avery-hall') {
     const explore = node('button', 'Explore scanned basement', 'explore');
     explore.onclick = () => window.parent.postMessage({ type: 'avery-explore', buildingId: p.building_id }, location.origin);
