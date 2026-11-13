@@ -1,0 +1,40 @@
+Columbia Campus Index — Tutorial 8.2
+Ci Song / November 2026
+
+TEMPLATE AND COURSE
+Plain HTML map structure (<ml-map>, maps/full-page.yaml, relative data paths):
+https://github.com/design-practices/html-maplibre-template/
+https://designpractices.org/tutorials/09-interactive-mapping-part-2/
+The template snapshots actually consulted are saved in sources/.
+
+LIBRARIES
+MapLibre GL JS 6.12.0: https://github.com/maplibre/maplibre-gl-js
+@maplibre-yaml/core 0.10.2: https://github.com/design-practices/maplibre-yaml
+Browser bundles are pinned and vendored. Exact download URLs and SHA-256 hashes
+are in sources/downloads.json. MapLibre license is in vendor/.
+Maplibre-yaml is MIT licensed; package copyright and source remain with its authors.
+
+PROJECT CODE
+HTML/CSS layout, building/directory search, coincident-reference selection,
+data-preparation and validation scripts were prepared with OpenAI Codex assistance
+on 12–13 November 2026, following Ci Song's approved plan and visual directions.
+The teacher's template provides YAML rendering and MapLibre integration.
+Custom js/campus.js adds directory interactions and an optional same-origin
+postMessage handoff to the Avery 3D experience when embedded in Assignment 4.
+
+DATA AND STYLE
+Columbia Blue style.json is reused from Ci Song's Tutorial 8.1.
+Building reference coordinates and space directory records are reused from
+Assignment 2's checked Manhattan dataset. Prior data preparation also used
+AI assistance; this is not a new field survey or verified indoor navigation.
+The derivative joins existing records by stable building_id and preserves
+original coordinates. No room, floor, door, or new building coordinates created.
+Source URLs remain attached to each building/space. Input hashes and workspace-relative
+source paths are in sources/data-provenance.json.
+Basemap services: OpenFreeMap, OpenMapTiles, OpenStreetMap contributors.
+
+REVIEW STATUS
+Prepared for Ci's review and public classroom access. Canvas submission remains
+with Ci. Ci confirmed instructor permission for this assistance on 13 November
+2026. This disclosure identifies the tools and sources used; Ci remains
+responsible for explaining the data, decisions and implementation.

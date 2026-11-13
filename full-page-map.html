@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Columbia · Campus index</title>
+  <meta name="description" content="Explore Columbia's public building and space directory across three Manhattan campuses.">
+  <link rel="stylesheet" href="vendor/maplibre-gl-6.12.0.css">
+  <link rel="stylesheet" href="css/site.css">
+  <script type="importmap">{"imports":{"maplibre-gl":"./vendor/maplibre-gl-6.12.0.mjs"}}</script>
+  <script type="module" src="js/campus.js"></script>
+</head>
+<body>
+  <main>
+    <!-- The teacher's Plain HTML component reads the YAML; no build step. -->
+    <ml-map id="campus-map" src="maps/full-page.yaml" aria-label="Columbia campus building reference map"></ml-map>
+    <nav class="map-tools" aria-label="Campus and search">
+      <a class="wordmark" href="./">Columbia</a>
+      <label class="sr-only" for="campus">Campus</label>
+      <select id="campus">
+        <option value="Morningside">Morningside</option>
+        <option value="Manhattanville">Manhattanville</option>
+        <option value="CUIMC">CUIMC</option>
+      </select>
+      <button id="search-toggle" type="button" aria-controls="directory" aria-expanded="false">Find a space</button>
+      <button id="about-toggle" class="quiet" type="button" aria-label="About this map">ⓘ</button>
+    </nav>
+    <aside id="directory" class="drawer" aria-label="Building and space directory" hidden>
+      <div class="drawer-top"><label for="search">Find a space</label><button class="icon" id="close-directory" aria-label="Close directory">×</button></div>
+      <input id="search" type="search" placeholder="Building or room number" autocomplete="off" aria-describedby="search-note">
+      <p class="muted" id="search-note">Names locate buildings, not classroom doors.</p>
+      <div id="results" aria-live="polite"></div>
+      <section id="building-detail" hidden></section>
+    </aside>
+    <dialog id="about">
+      <div class="drawer-top"><h1>Campus index</h1><button class="icon" id="close-about" aria-label="Close information">×</button></div>
+      <p>A map of how far Columbia's public space directories can locate a room.</p>
+      <ul class="legend">
+        <li><span class="dot solid"></span>Building linked to at least one verified floor statement</li>
+        <li><span class="dot pale"></span>Building linked to a directory; no confirmed floor statement</li>
+        <li><span class="dot empty"></span>Building reference without a linked directory</li>
+        <li><span class="dot institution"></span>Institution location; building not resolved</li>
+      </ul>
+      <p>84 reference points and 551 space-name entries, including teaching, meeting and support spaces. 24 entries have no mapped reference. Room coordinates are unavailable. Shared building coordinates are retained; selecting a point can reveal more than one building.</p>
+      <p>Sources: Columbia Operations, Registrar, schools and affiliates, with OSM location checks. Directory records checked 9 October 2026. Basemap: Columbia Blue from Tutorial 8.1, OpenFreeMap and © OpenStreetMap contributors.</p>
+      <p class="muted">Ci Song · November 2026<br>Tutorial 8.2 · <a href="CODE_SOURCES.txt">Code sources</a> · <a href="sources/data-provenance.json">Data provenance</a></p>
+    </dialog>
+    <p class="status" id="status" role="status">Loading campus map…</p>
+  </main>
+</body>
+</html>

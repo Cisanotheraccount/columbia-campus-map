@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=https://docs.maplibre-yaml.org/schema/latest/map.schema.json
+# Adapted from design-practices/html-maplibre-template/maps/full-page.yaml.
+type: map
+id: columbia-campus
+config:
+  mapStyle: style.json
+  center: [-73.9625, 40.8082]
+  zoom: 15.5
+  bearing: 0
+  pitch: 0
+controls:
+  navigation:
+    enabled: true
+    position: bottom-right
+layers:
+  - id: teaching-buildings
+    type: circle
+    source:
+      type: geojson
+      url: data/buildings.geojson
+    filter: ["!=", ["get", "entity_type"], "institution_site"]
+    paint:
+      circle-radius: [interpolate, [linear], [zoom], 11, 3, 16, 6]
+      circle-color: [match, [get, map_class], linked_with_floor, "#1D4F91", linked_no_confirmed_floor, "#B9D9EB", "#f8f8f6"]
+      circle-stroke-color: [match, [get, map_class], building_only, "#8c969b", "#1D4F91"]
+      circle-stroke-width: 1.5
+    interactive:
+      hover:
+        cursor: pointer
+      click: {}
+  - id: institution-reference
+    type: circle
+    source:
+      type: geojson
+      url: data/buildings.geojson
+    filter: ["==", ["get", "entity_type"], "institution_site"]
+    paint:
+      circle-radius: 7
+      circle-color: "#f8f8f6"
+      circle-stroke-color: "#1D4F91"
+      circle-stroke-width: 3
+    interactive:
+      hover:
+        cursor: pointer
+      click: {}

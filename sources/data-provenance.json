@@ -1,0 +1,24 @@
+{
+  "prepared": "2026-11-12",
+  "source_checked_date": "2026-10-09",
+  "reference_points": 84,
+  "space_name_entries": 551,
+  "space_entries_with_reference": 527,
+  "space_entries_without_reference": 24,
+  "room_coordinates": 0,
+  "method": "Preserve source coordinates and stable IDs; join directory by building_id. No new location inference.",
+  "inputs": [
+    {
+      "path": "Assignment 2 - Columbia Teaching Spaces/data/processed/manhattan/building_locations.geojson",
+      "sha256": "4700c09c103a084b36c0ff864983270216a64d9fa871939499add5468c4215a1"
+    },
+    {
+      "path": "Assignment 2 - Columbia Teaching Spaces/data/processed/manhattan/spaces.csv",
+      "sha256": "98a2556a5e23fe812e1e31b07670d327d44618e23eb37a3b83ec4e2d0ed3278d"
+    },
+    {
+      "path": "Tutorial 8.1 - Columbia Blue Basemap/style.json",
+      "sha256": "905e2e33d44a7bf6b90fb6a2f84b82ce1ec87d718b3b0664127e75d559689663"
+    }
+  ]
+}

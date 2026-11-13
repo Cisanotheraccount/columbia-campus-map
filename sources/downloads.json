@@ -1,0 +1,79 @@
+[
+  {
+    "file": "sources/template-full-page-map.html",
+    "url": "https://raw.githubusercontent.com/design-practices/html-maplibre-template/main/full-page-map.html",
+    "bytes": 2137,
+    "sha256": "e2b0056971f06d30144b321895483e2d74007b8e9671168b176aa3bc308472d7",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "sources/template-full-page.yaml",
+    "url": "https://raw.githubusercontent.com/design-practices/html-maplibre-template/main/maps/full-page.yaml",
+    "bytes": 2415,
+    "sha256": "c49720a728d9a246240e472086bef704bcbec61990929344fb8a2222fe5ba80d",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "sources/template-README.md",
+    "url": "https://raw.githubusercontent.com/design-practices/html-maplibre-template/main/README.md",
+    "bytes": 15471,
+    "sha256": "d2651ca7018ac583fce4453fe7a7391f5997ffdb4b8958b8a81474822553b91c",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "vendor/maplibre-yaml-0.10.2.js",
+    "url": "https://unpkg.com/@maplibre-yaml/core@0.10.2/dist/register.browser.js",
+    "bytes": 577920,
+    "sha256": "d4b030f607b124a9a912fabd24945488dfd1d94277675b0908f7e8ee4a0984a7",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "vendor/maplibre-gl-6.12.0.mjs",
+    "url": "https://unpkg.com/maplibre-gl@6.12.0/dist/maplibre-gl.mjs",
+    "bytes": 597295,
+    "sha256": "8e0545d1042293cb8c1e09949f36ba83237f69b4fbc080958cf38829615bcf69",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "vendor/maplibre-gl-6.12.0.css",
+    "url": "https://unpkg.com/maplibre-gl@6.12.0/dist/maplibre-gl.css",
+    "bytes": 83305,
+    "sha256": "8456072adc2cbf04f7b845bc83b90cec571b293bd37816970e6566f34946ab8b",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "vendor/LICENSE-maplibre.txt",
+    "url": "https://unpkg.com/maplibre-gl@6.12.0/LICENSE.txt",
+    "bytes": 5984,
+    "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "sources/tutorial-8.2.html",
+    "url": "https://designpractices.org/tutorials/09-interactive-mapping-part-2/",
+    "bytes": 91961,
+    "sha256": "e46a13dda3cefae9c3f66b5ada95bfe4f565274f74e9bd47501b7d43aaab2931",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "vendor/maplibre-gl-shared.mjs",
+    "url": "https://unpkg.com/maplibre-gl@6.12.0/dist/maplibre-gl-shared.mjs",
+    "bytes": 516951,
+    "sha256": "df3d0b4ba965ebafd2deae3c568500308be2982d87dadd771ba82dc5a49a4631",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "vendor/maplibre-gl-worker.mjs",
+    "url": "https://unpkg.com/maplibre-gl@6.12.0/dist/maplibre-gl-worker.mjs",
+    "bytes": 19130,
+    "sha256": "1ecca7178f0a496b7980dc7a3c6a8c3575eda673cf3e9fa3324dcce7ef3890c2",
+    "accessed": "2026-11-12"
+  },
+  {
+    "file": "vendor/LICENSE-maplibre-yaml.txt",
+    "url": "https://raw.githubusercontent.com/design-practices/maplibre-yaml/main/LICENSE.md",
+    "bytes": 1070,
+    "sha256": "ce4aea973cabe5c360a9ab3247eb3537cce55a41f972c9bd951f4946621610c9",
+    "accessed": "2026-11-12"
+  }
+]
